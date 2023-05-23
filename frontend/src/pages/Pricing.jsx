@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 export default function Pricing() {
     const [ question, setQuestion ] = useState(1)
 
-
     function questionSetter(x) {
         let prompt = ''
         const prompt1 = 'We can get most photos uploaded within 7 calendar days. If you need expedited service please call us.';
@@ -36,9 +35,8 @@ export default function Pricing() {
                 prompt = prompt7;
                 break;
         }
-        console.log(prompt)
         return prompt
-    }
+    };
 
 
 
@@ -66,24 +64,29 @@ export default function Pricing() {
                 <img className='margin' src="" alt="" placeholder="premium" style={{width: '315px', height:'470px'}}/>
                 <img className='margin' src="" alt="" placeholder="special purpose" style={{width: '315px', height:'470px'}}/>
             </div>
-            <div className="FAQ">
-                <h2>Frequently Asked Questions</h2>
-                <div style={{display: 'flex'}}>
-                    <div className="questions_container" style={{display: 'flex', flexDirection: 'column'}}>
-                        <span onClick={() => setQuestion(1)}>What is the turnaround time for a standard package?</span>
-                        <span onClick={() => setQuestion(2)}>Can the drone fly in bad weather?</span>
-                        <span onClick={() => setQuestion(3)}>How far will you travel?</span>
-                        <span onClick={() => setQuestion(4)}>Do I need to be present for the photo shoot?</span>
-                        <span onClick={() => setQuestion(5)}>How long is each session?</span>
-                        <span onClick={() => setQuestion(6)}>Can I get retakes?</span>
-                        <span onClick={() => setQuestion(7)}>Which drones do you fly?</span>
-                    </div>
-                    <div className="answers_container">
-                        {questionSetter(question)}
-                    </div>
+            <div style={{display: 'flex', justifyContent:'center'}}>
+                <div className="FAQ" style={{background:'rgb(244,244,244)', width:'1100px', margin: '30px', padding: '50px'}}>
+                    <h2 className="margin" >Frequently Asked Questions</h2>
+                    <div style={{display: 'flex', margin:'10px', justifyContent:'space-between'}}>
+                        <div className="questions_container" style={{display: 'flex', flexDirection: 'column'}}>
+                            <span className="margin" onClick={() => setQuestion(1)}>What is the turnaround time for a standard package?</span>
+                            <span className="margin" onClick={() => setQuestion(2)}>Can the drone fly in bad weather?</span>
+                            <span className="margin" onClick={() => setQuestion(3)}>How far will you travel?</span>
+                            <span className="margin" onClick={() => setQuestion(4)}>Do I need to be present for the photo shoot?</span>
+                            <span className="margin" onClick={() => setQuestion(5)}>How long is each session?</span>
+                            <span className="margin" onClick={() => setQuestion(6)}>Can I get retakes?</span>
+                            <span className="margin" onClick={() => setQuestion(7)}>Which drones do you fly?</span>
+                        </div>
+                        <div className="answers_container" style={{width:'500px'}}>
+                            {questionSetter(question)}
+                        </div>
                 </div>
             </div>
-            <hr />
+            </div>
+            <div className="center">
+                <hr style={{width: "500px"}}/>
+            </div>
+            
             <div style={{display: 'flex', flexDirection:'column'}}>
                 <div className="center" style={{margin:'50px'}}>
                     <h2>Ready to Begin?</h2>
@@ -96,4 +99,4 @@ export default function Pricing() {
 
         </div>
     )
-}
+};
