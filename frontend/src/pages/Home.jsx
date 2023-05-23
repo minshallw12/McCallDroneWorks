@@ -35,7 +35,9 @@ export default function Home() {
                 <img src="" alt="" style={{width: '450px', height:'500px', padding:'17px'}}/>
                 <img src="" alt="" style={{width: '450px', height:'500px', padding:'17px'}}/>
             </div>
-            
+            <div style={{height:'300px'}}>
+
+            </div>
         </div>
     )
 }
