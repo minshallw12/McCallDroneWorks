@@ -7,6 +7,7 @@ export default function ContactForm() {
     const [who, setWho] = useState('');
     const [sent, setSent] = useState(false)
     console.log(sent)
+
     const handleChange = (event) => {
         setWho(event.target.value)
     }
@@ -14,7 +15,7 @@ export default function ContactForm() {
     return (
         <div style={{display: 'flex', width: '700px', justifyContent: 'center', padding: '20px'}}>
             {
-                sent ? <h1>Your message has been sent!</h1> :
+                sent ? <div style={{height:'600px', display:'flex', justifyContent:'center', alignItems:'center'}}><h1>Your message has been sent!</h1></div> :
             
                 <form action="" style={{display: 'flex', flexDirection:'column', padding:'5px'}}>
                     <TextField
