@@ -1,12 +1,14 @@
 import home1 from '../images/home1.jpg';
 import lake from '../images/lakenorth2.jpeg';
 import dji from '../images/DJI_0132.jpeg';
+import Carosel from '../components/Carosel';
+
 
 export default function Home() {
     return (
         <div className="Home">
             <div className="center">
-                <img src={home1} alt="" style={{width: '900px', height:'650px'}}/>
+                <Carosel/>
             </div>
             <div style={{display:'flex', margin: '50px'}}>
                 <div style={{display: 'flex', flexDirection:'column'}}>

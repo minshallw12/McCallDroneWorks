@@ -84,6 +84,7 @@ export default function ContactForm() {
                         id="outlined-multiline-static"
                         name='message'
                         label="Message"
+                        multiline
                         rows={4}
                         style={{padding:'10px'}}
                     />
