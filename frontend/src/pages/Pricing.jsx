@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import Card from "react-bootstrap/Card";
 import drone1 from '../images/lakenorth2.jpeg';
@@ -7,6 +8,7 @@ import drone3 from '../images/DJI_0271.jpeg';
 
 export default function Pricing() {
     const [ question, setQuestion ] = useState(1)
+    const navigate = useNavigate()
 
     function questionSetter(x) {
         let prompt = ''
@@ -48,11 +50,11 @@ export default function Pricing() {
     return (
         <div className="Pricing">
           
-            <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                <div style={{width: '800px'}}>
+            <div style={{display: 'flex', justifyContent:'space-between', alignItems:'center'}}>
+                <div style={{display:'flex', justifyContent:'center', alignItems:'center', width: '500px', height:'200px'}}>
                     <h1>Pricing Schedule</h1>
                 </div>
-                <div style={{width: '800px'}}>
+                <div style={{width: '800px', padding:'50px'}}>
                     <p>
                         We realize each project is unique. 
                         We are more than happy to provide 
@@ -79,7 +81,7 @@ export default function Pricing() {
                                 <span><b>- Travel up to 20 miles</b></span>
                             </div>
                         </Card.Text>
-                        <Card.Text className="center">$199</Card.Text>
+                        <Card.Text className="center"><b>$199</b></Card.Text>
                     </Card.ImgOverlay>
                  </Card>
                  <Card className="bg-dark text-white" style={{width: '315px', height:'470px', margin:'5px'}}>
@@ -96,7 +98,7 @@ export default function Pricing() {
                                 <span><b>- Travel up to 20 miles</b></span>
                             </div>
                         </Card.Text>
-                        <Card.Text className="center">$349</Card.Text>
+                        <Card.Text className="center"><b>$349</b></Card.Text>
                     </Card.ImgOverlay>
                  </Card>
                  <Card className="bg-dark text-white" style={{width: '315px', height:'470px', margin:'5px'}}>
@@ -112,7 +114,7 @@ export default function Pricing() {
                                 <span><b>- Mapping</b></span>
                             </div>
                         </Card.Text>
-                        <Card.Text className="center">CALL FOR PRICE</Card.Text>
+                        <Card.Text className="center"><b>CALL FOR PRICE</b></Card.Text>
                     </Card.ImgOverlay>
                  </Card>
             </div>
@@ -144,7 +146,7 @@ export default function Pricing() {
                     <h2>Ready to Begin?</h2>
                 </div>
                 <div className="center" style={{margin:'50px'}}>
-                    <Button variant="outlined">Book a session!</Button>
+                    <Button onClick={()=>navigate('/contact/')}variant="outlined">Book a session!</Button>
                 </div>
                 
             </div>
