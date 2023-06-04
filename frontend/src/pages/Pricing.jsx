@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import Card from "react-bootstrap/Card";
-import drone1 from '../images/DJI_0038.jpeg';
+import drone1 from '../images/lakenorth2.jpeg';
+import drone2 from '../images/DJI_0520.jpeg';
+import drone3 from '../images/DJI_0271.jpeg';
 
 export default function Pricing() {
     const [ question, setQuestion ] = useState(1)
@@ -63,49 +65,51 @@ export default function Pricing() {
                 </div>
             </div>
             <div className="pricing_icons center">
-                <Card className="bg-dark text-white" style={{width: '315px', height:'470px', margin:'5px', alignItems:'center'}}>
+                <Card className="bg-dark text-white" style={{width: '315px', height:'470px', margin:'5px'}}>
                     <Card.Img src={drone1} alt="Card image" />
                     <Card.ImgOverlay>
                         <Card.Title className="center">STANDARD</Card.Title>
-                        <Card.Text className="center">
+                        <Card.Text className="center" style={{display:'flex', alignItems:'center', height:'300px'}}>
                             <div style={{display: 'flex', flexDirection:'column'}}>
-                                <span>Includes:</span>
-                                <span>- One (1) address up to 3 acres</span>
-                                <span>- Commercial rights</span>
-                                <span>- Five (5) high resolution photos</span>
-                                <span>- Travel up to 20 miles</span>
+                                <span><b>Includes:</b></span>
+                                <br></br>
+                                <span><b>- One (1) address up to 3 acres</b></span>
+                                <span><b>- Commercial rights</b></span>
+                                <span><b>- Five (5) high resolution photos</b></span>
+                                <span><b>- Travel up to 20 miles</b></span>
                             </div>
                         </Card.Text>
                         <Card.Text className="center">$199</Card.Text>
                     </Card.ImgOverlay>
                  </Card>
                  <Card className="bg-dark text-white" style={{width: '315px', height:'470px', margin:'5px'}}>
-                    <Card.Img src="holder.js/100px270" alt="Card image" />
+                    <Card.Img src={drone2} alt="Card image" />
                     <Card.ImgOverlay>
                         <Card.Title className="center">PREMIUM</Card.Title>
-                        <Card.Text className="center">
+                        <Card.Text className="center" style={{display:'flex', alignItems:'center', height:'300px'}}>
                             <div style={{display: 'flex', flexDirection:'column'}}>
-                                <span>Includes:</span>
-                                <span>- One (1) address up to 3+ acres</span>
-                                <span>- Commercial rights</span>
-                                <span>- Five (10) high resolution photos</span>
-                                <span>- Travel up to 20 miles</span>
+                                <span><b>Includes:</b></span>
+                                <br></br>
+                                <span><b>- One (1) address up to 3+ acres</b></span>
+                                <span><b>- Commercial rights</b></span>
+                                <span><b>- Five (10) high resolution photos</b></span>
+                                <span><b>- Travel up to 20 miles</b></span>
                             </div>
                         </Card.Text>
                         <Card.Text className="center">$349</Card.Text>
                     </Card.ImgOverlay>
                  </Card>
                  <Card className="bg-dark text-white" style={{width: '315px', height:'470px', margin:'5px'}}>
-                    <Card.Img src="holder.js/100px270" alt="Card image" />
+                    <Card.Img src={drone3} alt="Card image" />
                     <Card.ImgOverlay>
                         <Card.Title className="center">SPECIAL PURPOSE</Card.Title>
-                        <Card.Text className="center">
+                        <Card.Text className="center" style={{display:'flex', alignItems:'center', height:'300px'}}>
                             <div style={{display: 'flex', flexDirection:'column'}}>
-                                <span>- Construction & Development</span>
-                                <span>- Agriculture</span>
-                                <span>- Events</span>
-                                <span>- Civil inspections</span>
-                                <span>- Mapping</span>
+                                <span><b>- Construction & Development</b></span>
+                                <span><b>- Agriculture</b></span>
+                                <span><b>- Events</b></span>
+                                <span><b>- Civil inspections</b></span>
+                                <span><b>- Mapping</b></span>
                             </div>
                         </Card.Text>
                         <Card.Text className="center">CALL FOR PRICE</Card.Text>
