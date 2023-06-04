@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { Button } from "@mui/material";
+import Card from "react-bootstrap/Card";
+import drone1 from '../images/DJI_0038.jpeg';
 
 export default function Pricing() {
     const [ question, setQuestion ] = useState(1)
@@ -60,9 +63,54 @@ export default function Pricing() {
                 </div>
             </div>
             <div className="pricing_icons center">
-                <img className='margin' src="" alt="" placeholder="standard" style={{width: '315px', height:'470px'}}/>
-                <img className='margin' src="" alt="" placeholder="premium" style={{width: '315px', height:'470px'}}/>
-                <img className='margin' src="" alt="" placeholder="special purpose" style={{width: '315px', height:'470px'}}/>
+                <Card className="bg-dark text-white" style={{width: '315px', height:'470px', margin:'5px', alignItems:'center'}}>
+                    <Card.Img src={drone1} alt="Card image" />
+                    <Card.ImgOverlay>
+                        <Card.Title className="center">STANDARD</Card.Title>
+                        <Card.Text className="center">
+                            <div style={{display: 'flex', flexDirection:'column'}}>
+                                <span>Includes:</span>
+                                <span>- One (1) address up to 3 acres</span>
+                                <span>- Commercial rights</span>
+                                <span>- Five (5) high resolution photos</span>
+                                <span>- Travel up to 20 miles</span>
+                            </div>
+                        </Card.Text>
+                        <Card.Text className="center">$199</Card.Text>
+                    </Card.ImgOverlay>
+                 </Card>
+                 <Card className="bg-dark text-white" style={{width: '315px', height:'470px', margin:'5px'}}>
+                    <Card.Img src="holder.js/100px270" alt="Card image" />
+                    <Card.ImgOverlay>
+                        <Card.Title className="center">PREMIUM</Card.Title>
+                        <Card.Text className="center">
+                            <div style={{display: 'flex', flexDirection:'column'}}>
+                                <span>Includes:</span>
+                                <span>- One (1) address up to 3+ acres</span>
+                                <span>- Commercial rights</span>
+                                <span>- Five (10) high resolution photos</span>
+                                <span>- Travel up to 20 miles</span>
+                            </div>
+                        </Card.Text>
+                        <Card.Text className="center">$349</Card.Text>
+                    </Card.ImgOverlay>
+                 </Card>
+                 <Card className="bg-dark text-white" style={{width: '315px', height:'470px', margin:'5px'}}>
+                    <Card.Img src="holder.js/100px270" alt="Card image" />
+                    <Card.ImgOverlay>
+                        <Card.Title className="center">SPECIAL PURPOSE</Card.Title>
+                        <Card.Text className="center">
+                            <div style={{display: 'flex', flexDirection:'column'}}>
+                                <span>- Construction & Development</span>
+                                <span>- Agriculture</span>
+                                <span>- Events</span>
+                                <span>- Civil inspections</span>
+                                <span>- Mapping</span>
+                            </div>
+                        </Card.Text>
+                        <Card.Text className="center">CALL FOR PRICE</Card.Text>
+                    </Card.ImgOverlay>
+                 </Card>
             </div>
             <div style={{display: 'flex', justifyContent:'center'}}>
                 <div className="FAQ" style={{background:'rgb(244,244,244)', width:'1100px', margin: '30px', padding: '50px'}}>
@@ -92,7 +140,7 @@ export default function Pricing() {
                     <h2>Ready to Begin?</h2>
                 </div>
                 <div className="center" style={{margin:'50px'}}>
-                    <button>BOOK A SESSION</button>
+                    <Button variant="outlined">Book a session!</Button>
                 </div>
                 
             </div>
