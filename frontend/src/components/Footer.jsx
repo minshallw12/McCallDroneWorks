@@ -1,5 +1,4 @@
 import facebook from '../images/facebook.png';
-import { Link } from 'react-router-dom';
 
 export default function Footer() {
 
